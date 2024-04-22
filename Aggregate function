@@ -1,0 +1,8 @@
+SELECT 
+	SUM(total) AS revenue,
+    SUM(total)*0.07 AS vat_7_percent, -- add vat7%
+    AVG(total),
+    MIN(total),
+    MAX(total),
+    COUNT(total)
+FROM invoices;
