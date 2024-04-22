@@ -1,0 +1,7 @@
+-- extract from file chinook.db from SQLite sameple database
+SELECT
+	*
+FROM artists AS ar
+LEFT JOIN albums AS al ON ar.ArtistId = al.ArtistId
+LEFT JOIN tracks AS tr ON al.ArtistId = tr.AlbumId
+INNER JOIN genres AS ge ON tr.GenreId = ge.GenreId
