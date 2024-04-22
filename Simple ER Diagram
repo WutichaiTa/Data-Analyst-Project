@@ -1,0 +1,38 @@
+// create our first table
+Table customers {
+  customer_id int [primary key]
+  name text
+  age int
+  spending decimal
+}
+
+// create food_orders table
+
+Table food_orders {
+  order_id int [primary key]
+  order_value decimal
+  order_name text
+  customer_id int
+  rider_id int
+  shop_id int
+}
+
+// create riders table
+Table riders {
+  rider_id int [primary key]
+  name text
+  age int
+  address text
+}
+
+// create shops table
+Table shops {
+  shop_id int [primary key]
+  name text
+}
+// reference
+Ref: customers.customer_id < food_orders.customer_id // one to many
+Ref: riders.rider_id < food_orders.rider_id
+Ref: shops.shop_id < food_orders.shop_id
+
+// My ER Diagram = https://dbdiagram.io/d/Simple-ER-Diagram-6626303103593b6b619d8ae5
