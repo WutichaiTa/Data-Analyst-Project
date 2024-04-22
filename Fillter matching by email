@@ -1,0 +1,8 @@
+SELECT 
+	firstname as  fname,
+    lastname AS lname,
+    firstname || ' ' || lastname AS fullname,
+    firstname || '@gmail.com' AS email
+FROM customers
+-- pattern macthing
+WHERE email LIKE '%@gmail.com'
