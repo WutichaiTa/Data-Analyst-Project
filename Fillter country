@@ -1,0 +1,7 @@
+SELECT 
+	firstname as  fname,
+    lastname AS lname,
+    firstname || ' ' || lastname AS fullname,
+    firstname || '@gmail.com' AS email
+FROM customers
+WHERE country IN ('USA', 'Brazil', 'United Kingdom', 'France');
